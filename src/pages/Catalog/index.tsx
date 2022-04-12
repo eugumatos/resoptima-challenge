@@ -24,7 +24,7 @@ export function Catalog() {
   return (
     <Container>
       <form onSubmit={handleSubmit(handleFilter)}>
-        <SearchBox {...register("search")} />
+        <SearchBox placeholder="Search" {...register("search")} />
       </form>
 
       <Content>
@@ -50,7 +50,7 @@ export function Catalog() {
 
       <div>
         <Pagination 
-          totalCountOfRegisters={100}
+          totalCountOfRegisters={data?.totalCount ?? 1000}
           currentPage={page}
           onPageChange={setPage} 
         />
