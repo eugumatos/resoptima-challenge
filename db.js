@@ -9,7 +9,7 @@ module.exports = () => {
     movies: [],
   };
 
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 1000; i++) {
     data.movies.push({
       id: `movie-${i}`,
       title: capitalizeFirstLetter(faker.lorem.words()),
